@@ -1,4 +1,5 @@
 class Chef < ActiveRecord::Base
+	has_many :myrecipes
 	before_save { self.email = email.downcase }
 	validates :name, presence: true, length: { minimum: 3, maximum: 40 }
 	VALID_EMAIL_REGEX = /\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
