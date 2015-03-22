@@ -12,7 +12,7 @@
 		</div>
 
 		<div class="col-lg-8 well">
-			<h4><%= link_to myrecipe.name, " " %></h4>
+			<h4><%= link_to myrecipe.name, myrecipe_path(myrecipe) %></h4>
 			<p><%= myrecipe.summary %></p>
 			<p>
 				<span class='quiet'><small> <%= time_ago_in_words(myrecipe.created_at) %></small></span>
