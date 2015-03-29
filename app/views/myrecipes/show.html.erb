@@ -18,6 +18,14 @@
 				<strong>Steps:</string>
 			</p>
 			<%= simple_format(@myrecipe.description) %>
+			<div class="pull-right">
+				<%= link_to like_myrecipe_path(@myrecipe, like: true), method: :post do %>
+					<i class="glyphicon glyphicon-thumbs-up"></i> &nbsp <%= @myrecipe.thumbs_up_total %>
+				<% end %> &nbsp&nbsp&nbsp&nbsp
+				<%= link_to like_myrecipe_path(@myrecipe, like: false), method: :post do %>
+					<i class="glyphicon glyphicon-thumbs-down"></i> &nbsp <%= @myrecipe.thumbs_down_total %>
+				<% end %>
+			</div>
 		</div>
 	</div>
 </div>
