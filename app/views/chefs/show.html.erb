@@ -6,7 +6,15 @@
 		<hr />
 	</div>
 </div>
-<% @chef.myrecipes.each do |myrecipe| %>
+
+<div class="row">
+	<div class="col-md-4 col-md-offset-4 center">
+		<h3><em>Recipes:</em></h3>
+		<%= will_paginate @myrecipes %>
+	</div>
+</div>
+
+<% @myrecipes.each do |myrecipe| %>
 	<div class="row">
 		<div class="col-lg-6 well col-lg-offset-3">
 			<h4><%= link_to myrecipe.name, myrecipe_path(myrecipe) %></h4>
